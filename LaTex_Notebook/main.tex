@@ -1,0 +1,83 @@
+\documentclass[12pt,oneside,a4paper,english]{article}
+
+% --- Installed Packages ---
+\input{sources/00_preamble.tex}
+
+
+% ---- Start of Document ----
+
+\begin{document}
+
+\pagenumbering{arabic} %set page numbers as arabic numerals
+\fancyfoot[C]{Page \thepage\ of \pageref{EndOfText}} %sets up footer such that it has page count out of total page count
+\hypersetup{hidelinks} %hide hyperlink box outlines for links
+
+% Cover Page File
+\input{sources/0_coverpage.tex}
+
+% Table of Contents File
+\input{sources/1_TOC.tex}
+
+% ------ Introduction ------
+\input{sources/2_introduction.tex}
+
+% ------ List of Tables ------
+\input{sources/7_list_of_tables.tex}
+
+% ------ List of Figures ------
+\input{sources/8_list_of_figures.tex}
+
+% ------ Nomenclature Index ------
+% \newpage
+% \addcontentsline{toc}{section}{Nomenclature}
+%\input{sources/9_nomenclat.tex}
+% \makenomenclature
+%\clearpage
+%\mbox{}
+
+% ------ Bibliography ------
+% \newpage
+% \addcontentsline{toc}{section}{References}
+% \bibliography{document.bib} 
+% \bibliographystyle{ieeetr}
+
+% ------ Appendicies ------
+\input{sources/99_appendices.tex}
+
+\label{EndOfText}
+\end{document}
+
+% --- Code for future reference ---
+
+% Example of how to insert a figure:
+% \begin{figure}[H]
+%     \centering
+%     \includegraphics[width = 0.2\textwidth ]{figures/tex.png}
+%     \caption{Benny The Beaver.} 
+%     %\cite{benny_history}
+%     % \label{fig:bennyb}
+% \end{figure}
+%\autoref{fig:bennyb}
+
+% Example of how to insert a table:
+% \begin{table}[H]
+%     \centering
+%     \caption{That is a table.}
+%     \begin{tabular}{|c|c|c|}
+%     \centering
+%     \textbf{Lorem} & \textbf{Ipsum} & \textbf{Lorem [\$]} \\ \hline \hline
+% 1   & lipsum    & lorem     \\ \hline   
+% 2   & lipsum    & lorem   \\ \hline
+% 3   & lipsum    & lorem  
+%     \end{tabular}
+%     \label{tab:table1}
+% \end{table}
+%\autoref{tab:table1}
+
+% \section{Design Objectives}
+% \begin{wrapfigure}[11]{r}{0.4\textwidth}
+%   \vspace{-20pt}
+%   \includegraphics[width=1\linewidth]{figures/IMG_0310.png}
+%   \caption{Photo of the VEX High-Stakes game Field Arena with two robots inside.}
+%   \label{fig:highstakesfield}
+% \end{wrapfigure}
